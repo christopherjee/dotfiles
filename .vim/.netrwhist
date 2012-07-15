@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/cjee/development/Web/tests/phpunit/Translation/data'
 let g:netrw_dirhist_2='/home/cjee/development/Web/phplib/Thrift'
 let g:netrw_dirhist_3='/home/cjee/development/Web/phplib/Thrift/Hydrator'
+let g:netrw_dirhist_4='/Users/chris'
+let g:netrw_dirhist_5='/Users'
+let g:netrw_dirhist_6='/Users/chris/development'

@@ -90,3 +90,5 @@ let g:SuperTabDefaultCompletionTypeDiscovery = [
             \ ]
 let g:SuperTabLongestHighlight = 1
 
+" localvimrc
+let g:localvimrc_sandbox = 0

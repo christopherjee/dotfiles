@@ -31,6 +31,7 @@ set path+=~/development/Web/templates
 set path+=~/development/Web/htdocs/assets/css
 set path+=~/development/Web/htdocs/assets/js
 nmap <c-l> :tabnew<CR>:tabm<CR><c-p>
+nmap <c-n> :tabnew<CR><c-p>
 nnoremap <c-b> <c-p><c-b>
 cabbr <expr> %% expand('%:p:h')
 
@@ -92,3 +93,8 @@ let g:SuperTabLongestHighlight = 1
 
 " localvimrc
 let g:localvimrc_sandbox = 0
+
+" paste mode toggle
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode

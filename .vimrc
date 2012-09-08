@@ -56,7 +56,8 @@ inoremap <c-z> Logger::log_info("zomg ");<Esc><Left><Left>i
 nmap <c-z> O<c-z>
 
 " make it easier to search whole project
-nmap <c-f> :LAck <cword>
+let g:searchword = ''
+nmap <c-f> :let g:searchword = expand("<cword>")<CR>:tabnew<CR>:LAck <C-R>=string(g:searchword)<CR>
 
 " TList stuff
 " set the names of flags

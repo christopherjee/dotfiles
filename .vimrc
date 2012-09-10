@@ -99,3 +99,8 @@ let g:localvimrc_sandbox = 0
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
+
+" tab toggle
+au TabLeave * :let g:tabno = tabpagenr()
+map gg :exec 'normal !'.g:tabno.'gt'<cr>
+"tt -> tab toggle

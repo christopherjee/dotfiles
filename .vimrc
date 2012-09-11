@@ -30,8 +30,8 @@ vnoremap < <gv
 set path+=~/development/Web/templates
 set path+=~/development/Web/htdocs/assets/css
 set path+=~/development/Web/htdocs/assets/js
-nmap <c-l> :tabnew<CR>:tabm<CR>
-nmap <c-n> :tabnew<CR>
+nmap <c-l> :tabnew<CR>:tabm<CR><c-p>
+nmap <c-n> :tabnew<CR><c-p>
 nnoremap <c-b> <c-p><c-b>
 cabbr <expr> %% expand('%:p:h')
 

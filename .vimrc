@@ -57,7 +57,7 @@ nmap <c-z> O<c-z>
 
 " make it easier to search whole project
 let g:searchword = ''
-nmap <c-f> <c-n>:LAck<Space>
+nmap <c-f> :tabnew<CR>:LAck<Space>
 nmap <c-f><c-f> :let g:searchword = expand("<cword>")<CR>:tabnew<CR>:LAck <C-R>=string(g:searchword)<CR>
 
 " TList stuff

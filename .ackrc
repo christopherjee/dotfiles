@@ -1,0 +1,5 @@
+--type-set=smarty=.tpl
+--type-set=patch=.patch
+--type-set=txt=.txt
+--ignore-dir=tmp/templates/compile
+--smart-case

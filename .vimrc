@@ -57,7 +57,7 @@ nmap <c-z> O<c-z>
 
 " make it easier to search whole project
 let g:searchword = ''
-nmap <c-f> :tabnew<CR>:LAck<Space>
+nmap <c-f> :tabnew<CR>:LAck<Space>''<left>
 nmap <c-f><c-f> :let g:searchword = expand("<cword>")<CR>:tabnew<CR>:LAck <C-R>=string(g:searchword)<CR>
 
 " TList stuff
@@ -103,5 +103,10 @@ set showmode
 
 " tab toggle
 au TabLeave * :let g:tabno = tabpagenr()
-map gg :exec 'normal !'.g:tabno.'gt'<cr>
-"tt -> tab toggle
+map gg :exec 'normal !'.g:tabno.'gt'<CR>
+
+" current file
+function! Pwf()
+    execute "echo @%"
+endfunction
+command! -nargs=0  Pwf call Pwf()

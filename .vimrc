@@ -27,9 +27,6 @@ autocmd BufWritePre *.php :%s/if(/if (/e
 autocmd BufWritePre *.php :%s/foreach(/foreach (/e
 vnoremap > >gv
 vnoremap < <gv
-set path+=~/development/Web/templates
-set path+=~/development/Web/htdocs/assets/css
-set path+=~/development/Web/htdocs/assets/js
 nmap <c-l> :tabnew<CR>:tabm<CR><c-p>
 nmap <c-n> :tabnew<CR><c-p>
 nnoremap <c-b> <c-p><c-b>
@@ -40,20 +37,6 @@ filetype plugin on
 au FileType php set omnifunc=phpcomplete#CompletePHP
 imap <c-c> <c-x><c-o>
 set completeopt="menu"
-
-" updating project tags
-nmap <c-c> :!ctags -f ~/tags/Web ~/development/Web/<CR>
-set tags+=~/tags/Web
-
-function! Pull()
-    execute "!ctags -f ~/tags/Web ~/development/Web/"
-    execute "tabdo :e"
-endfunction
-command! -nargs=0  Pull call Pull()
-
-" turbo println debugging
-inoremap <c-z> Logger::log_info("zomg ");<Esc><Left><Left>i
-nmap <c-z> O<c-z>
 
 " make it easier to search whole project
 let g:searchword = ''

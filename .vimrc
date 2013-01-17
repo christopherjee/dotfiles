@@ -93,3 +93,8 @@ function! Pwf()
     execute "echo @%"
 endfunction
 command! -nargs=0  Pwf call Pwf()
+
+" disable syntax highlighting for files over 100K
+au BufReadPost * if getfsize(bufname("%")) > 102400 | set syntax= | endif
+
+command! Blame !git blame %

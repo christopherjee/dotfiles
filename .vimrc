@@ -1,3 +1,6 @@
+" open all files in argument list in tabs
+tab all
+
 " pathogen bundling plugin
 call pathogen#infect()
 syntax on

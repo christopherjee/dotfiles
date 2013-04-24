@@ -1,1 +1,23 @@
+--vertica specific
 SET SESSION AUTOCOMMIT = ON;
+SET SEARCH_PATH =  etsy_shard, etsy_v2, zoo, "$user", public, dbadmin, v_catalog, v_monitor, v_internal;
+
+--default format settings --timing format is a little different in psql
+\set time_default '\\timing'
+:time_default
+\set delimiter_default '\\f \'|\''
+:delimiter_default
+\set align_default '\\pset format aligned'
+:align_default
+\set HISTCONTROL ignoredups
+
+
+--other settings
+\set PROMPT1 '(%n@%M:%>) [%/] %:output:%x> '
+\set PROMPT2 '%:output:%x> ' --the output variable is set by o_start
+\set HISTSIZE 2000
+
+
+--output settings
+\set o_start '\\set QUIET \\set output output_mode \\pset footer off \\pset format unaligned \\f \'\\t\' \\timing \\unset QUIET \\o '
+\set o_end '\\o ; \\set QUIET \\pset footer on \\unset output ' :align_default :delimiter_default :time_default '\\unset QUIET'

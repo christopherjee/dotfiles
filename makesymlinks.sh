@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files=".bashrc .vimrc .vim .tmux.conf .ackrc"    # list of files/folders to symlink in homedir
+files=".bashrc .vimrc .vim .tmux.conf .ackrc .vsqlrc"    # list of files/folders to symlink in homedir
 
 ##########
 

@@ -6,6 +6,8 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" ctrl-p
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible
 set hlsearch
 set ignorecase

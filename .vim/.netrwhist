@@ -1,10 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/usr/bin'
-let g:netrw_dirhist_2='/home/cjee/working'
-let g:netrw_dirhist_3='/home/cjee/working/xliff-tools'
-let g:netrw_dirhist_4='/home/cjee/working/xliff-tools/includes'
-let g:netrw_dirhist_5='/home/cjee/development/Etsyweb/phplib/EtsyModel/User'
-let g:netrw_dirhist_6='/home/cjee/development/Etsyweb/phplib/EtsyModel'
-let g:netrw_dirhist_7='/home/cjee/development/Etsyweb/phplib/ScheduledModules'
-let g:netrw_dirhist_8='/home/cjee/development/Etsyweb/phplib/ScheduledModules/UIAdaptor'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/cjee/development/Etsyweb/phplib/Geo'
+let g:netrw_dirhist_2='/home/cjee/development/Etsyweb/templates/pages/user'
+let g:netrw_dirhist_3='/home/cjee/development/Etsyweb/htdocs/assets/css/invites'
+let g:netrw_dirhist_4='/home/cjee/development/Etsyweb/htdocs/assets/css/invites/seller'

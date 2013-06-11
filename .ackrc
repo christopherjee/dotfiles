@@ -3,5 +3,6 @@
 --type-set=txt=.txt
 --type-set=json=.json
 --ignore-dir=tmp/templates/compile
+--ignore-dir=tmp
 --ignore-dir=translations
 --smart-case

@@ -8,6 +8,8 @@ filetype plugin indent on
 
 " ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_max_files = 10000
+
 set nocompatible
 set hlsearch
 set ignorecase
@@ -32,9 +34,9 @@ autocmd BufWritePre *.php :%s/if(/if (/e
 autocmd BufWritePre *.php :%s/foreach(/foreach (/e
 vnoremap > >gv
 vnoremap < <gv
-nmap <c-l> :tabnew<CR>:tabm<CR><c-p>
-nmap <c-n> :tabnew<CR><c-p>
-nnoremap <c-b> <c-p><c-b>
+nmap <c-l> :tabnew<CR>:tabm<CR><Leader>t
+nmap <c-n> :tabnew<CR><Leader>t
+" nnoremap <c-b> <c-p><c-b>
 cabbr <expr> %% expand('%:p:h')
 
 " omniautocomplete

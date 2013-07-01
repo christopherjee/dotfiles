@@ -1,6 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/cjee/development/Etsyweb/phplib/Geo'
-let g:netrw_dirhist_2='/home/cjee/development/Etsyweb/templates/pages/user'
-let g:netrw_dirhist_3='/home/cjee/development/Etsyweb/htdocs/assets/css/invites'
-let g:netrw_dirhist_4='/home/cjee/development/Etsyweb/htdocs/assets/css/invites/seller'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/cjee/development/Etsyweb/phplib/JobWorker'

@@ -34,10 +34,13 @@ autocmd BufWritePre *.php :%s/if(/if (/e
 autocmd BufWritePre *.php :%s/foreach(/foreach (/e
 vnoremap > >gv
 vnoremap < <gv
+
+" command-t / ctrlp
 nmap <c-l> :tabnew<CR>:tabm<CR><Leader>t
 nmap <c-n> :tabnew<CR><Leader>t
 " nnoremap <c-b> <c-p><c-b>
 cabbr <expr> %% expand('%:p:h')
+noremap <F5> :CommandTFlush<CR>
 
 " omniautocomplete
 filetype plugin on

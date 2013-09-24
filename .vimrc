@@ -41,6 +41,7 @@ nmap <c-n> :tabnew<CR><Leader>t
 " nnoremap <c-b> <c-p><c-b>
 cabbr <expr> %% expand('%:p:h')
 noremap <F5> :CommandTFlush<CR>
+set wildignore+=tmp/*
 
 " omniautocomplete
 filetype plugin on
@@ -96,7 +97,7 @@ set showmode
 
 " tab toggle
 au TabLeave * :let g:tabno = tabpagenr()
-map gg :exec 'normal !'.g:tabno.'gt'<CR>
+map gg :exec 'normal!' . g:tabno . 'gt'<CR>
 
 " current file
 function! Pwf()

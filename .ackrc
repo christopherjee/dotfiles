@@ -5,4 +5,5 @@
 --ignore-dir=tmp/templates/compile
 --ignore-dir=tmp
 --ignore-dir=translations
+--ignore-dir=htdocs/assets/dist
 --smart-case

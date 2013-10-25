@@ -42,6 +42,7 @@ nmap <c-n> :tabnew<CR><Leader>t
 cabbr <expr> %% expand('%:p:h')
 noremap <F5> :CommandTFlush<CR>
 set wildignore+=tmp/*
+set wildignore+=htdocs/assets/dist/*
 
 " omniautocomplete
 filetype plugin on
@@ -108,4 +109,5 @@ command! -nargs=0  Pwf call Pwf()
 " disable syntax highlighting for files over 100K
 au BufReadPost * if getfsize(bufname("%")) > 102400 | set syntax= | endif
 
-command! Blame !git blame %
+" fugitive/git
+let g:fugitive_github_domains = ['github.etsycorp.com']

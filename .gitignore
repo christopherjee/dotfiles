@@ -1,2 +1,7 @@
 .vim/.vim
 .vim/.netrwhist
+.vim/doc/tags
+.vim/.VimballRecord
+.vim/doc/command-t.txt
+.vim/plugin/command-t.vim
+.vim/ruby/

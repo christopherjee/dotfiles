@@ -41,8 +41,6 @@ nmap <c-n> :tabnew<CR><Leader>t
 " nnoremap <c-b> <c-p><c-b>
 cabbr <expr> %% expand('%:p:h')
 noremap <F5> :CommandTFlush<CR>
-set wildignore+=tmp/*
-set wildignore+=htdocs/assets/dist/*
 
 " omniautocomplete
 filetype plugin on
@@ -111,3 +109,6 @@ au BufReadPost * if getfsize(bufname("%")) > 102400 | set syntax= | endif
 
 " fugitive/git
 let g:fugitive_github_domains = ['github.etsycorp.com']
+
+" open file under cursor in new tab
+map <silent> <c-g> <c-w>gf

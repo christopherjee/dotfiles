@@ -1,10 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/cjee/development/Etsyweb/phplib/JobWorker'
-let g:netrw_dirhist_2='/home/cjee/working'
-let g:netrw_dirhist_3='/home/cjee/development/SchemaDumps'
-let g:netrw_dirhist_4='/home/cjee/development/SchemaDumps/mysql'
-let g:netrw_dirhist_5='/home/cjee/development/Etsyweb/templates/pages/invites'
-let g:netrw_dirhist_6='/home/cjee/development/Etsyweb/templates/pages/invites/modules'
-let g:netrw_dirhist_7='/home/cjee/development/Etsyweb/templates/pages/invites/buyer/_modules'
-let g:netrw_dirhist_8='/home/cjee/development/Etsyweb/phplib/EtsyConfig'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/cjee/development/Etsyweb/tests/phpunit/EtsyORM/Schema'
+let g:netrw_dirhist_2='/home/cjee/development/Etsyweb/tests/phpunit/EtsyORM/Schema/TranslationManager'
+let g:netrw_dirhist_3='/home/cjee/development/Etsyweb/tests/phpunit/EtsyORM/Schema/TranslationManager/EtsyModel'
+let g:netrw_dirhist_4='/home/cjee/development/Etsyweb/tests/phpunit/EtsyORM/Schema/TranslationManager/EtsyModel/data'
+let g:netrw_dirhist_5='/home/cjee/development/Etsyweb/phplib/REST/Service'
+let g:netrw_dirhist_6='/home/cjee/development/Etsyweb/templates/modules/facebook'

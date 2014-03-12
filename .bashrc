@@ -5,6 +5,7 @@ tailfs() { tail -f $1 | fgrep "$2"; }
 alias git-root='cd $(git rev-parse --show-toplevel)'
 alias vimbranch='vim $(git diff master.. --name-only --relative)'
 alias vimdiff='vim $(git diff --name-only --relative)'
+bind '"\t":menu-complete'
 
 alias tmp_clear='sudo rm -rf $PROJECT_ROOT/tmp/templates/compile'
 

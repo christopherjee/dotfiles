@@ -6,9 +6,19 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" command-t / ctrlp
+nmap <c-l> :tabnew<CR>:tabm<CR><c-p>
+nmap <c-n> :tabnew<CR><c-p>
+" nnoremap <c-b> <c-p><c-b>
+cabbr <expr> %% expand('%:p:h')
+noremap <F5> :CommandTFlush<CR>
+set wildignore+=tmp/*
+set wildignore+=htdocs/assets/dist/*
+
 " ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_max_files = 10000
+let g:ctrlp_user_command = 'find %s -type f -not -path "*.class" -not -path "*.pyc" -not -path "*/tmp/*"'"
 
 set nocompatible
 set hlsearch
@@ -27,6 +37,7 @@ set listchars=tab:>.,trail:~,extends:>,precedes:<
 set showmatch
 set showtabline=2
 set tw=0
+imap <S-Tab> <C-o><<
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 autocmd BufWritePre * :%s/\s\+$//e
@@ -34,13 +45,6 @@ autocmd BufWritePre *.php :%s/if(/if (/e
 autocmd BufWritePre *.php :%s/foreach(/foreach (/e
 vnoremap > >gv
 vnoremap < <gv
-
-" command-t / ctrlp
-nmap <c-l> :tabnew<CR>:tabm<CR><Leader>t
-nmap <c-n> :tabnew<CR><Leader>t
-" nnoremap <c-b> <c-p><c-b>
-cabbr <expr> %% expand('%:p:h')
-noremap <F5> :CommandTFlush<CR>
 
 " omniautocomplete
 filetype plugin on

@@ -15,22 +15,24 @@ set wildignore+=~/development/Etsyweb/tmp/*
 set wildignore+=~/development/Etsyweb/htdocs/assets/dist/*
 
 " ctrl-p
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+else
+  let g:ctrlp_user_command = 'find %s -type f -not -path "*.class" -not -path "*.pyc" -not -path "*/tmp/*"'
+  let g:ctrlp_use_caching = 1
+endif
+
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_regexp = 1
-
-let g:ctrlp_use_caching = 1
-let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
-" Do not clear filenames cache, to improve CtrlP startup
-" You can manualay clear it by <F5>
-let g:ctrlp_clear_cache_on_exit = 0
-
-if executable("ag")
-  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden -g ""'
-else
-  let g:ctrlp_user_command = 'find %s -type f -not -path "*.class" -not -path "*.pyc" -not -path "*/tmp/*"'
-endif
 
 set nocompatible
 set hlsearch

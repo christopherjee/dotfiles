@@ -120,8 +120,8 @@ let g:SuperTabLongestHighlight = 1
 let g:localvimrc_sandbox = 0
 
 " paste mode toggle
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
+nnoremap <c-i> :set invpaste paste?<CR>
+set pastetoggle=<c-i>
 set showmode
 
 " tab toggle

@@ -1,3 +1,17 @@
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'mileszs/ack.vim'
+
+call vundle#end()
+filetype plugin indent on
+
 " open all files in argument list in tabs
 tab all
 
@@ -11,8 +25,6 @@ nmap <c-l> :tabnew<CR>:tabm<CR><c-p>
 nmap <c-n> :tabnew<CR><c-p>
 " nnoremap <c-b> <c-p><c-b>
 cabbr <expr> %% expand('%:p:h')
-set wildignore+=~/development/Etsyweb/tmp/*
-set wildignore+=~/development/Etsyweb/htdocs/assets/dist/*
 
 " ctrl-p
 " The Silver Searcher
@@ -34,7 +46,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-set nocompatible
 set hlsearch
 set ignorecase
 set smartcase
@@ -125,8 +136,13 @@ command! -nargs=0  Pwf call Pwf()
 " disable syntax highlighting for files over 100K
 au BufReadPost * if getfsize(bufname("%")) > 102400 | set syntax= | endif
 
-" fugitive/git
-let g:fugitive_github_domains = ['github.etsycorp.com']
-
 " open file under cursor in new tab
 map <silent> <c-g> <c-w>gf
+
+" backups
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
+
+
+

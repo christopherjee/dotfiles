@@ -16,11 +16,6 @@ filetype plugin indent on
 " open all files in argument list in tabs
 tab all
 
-" pathogen bundling plugin
-call pathogen#infect()
-syntax on
-filetype plugin indent on
-
 " command-t / ctrlp
 nmap <c-l> :tabnew<CR>:tabm<CR><c-p>
 nmap <c-n> :tabnew<CR><c-p>
@@ -38,6 +33,12 @@ if executable('ag')
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+
+  let g:ackprg = 'ag --vimgrep --smart-case'
+  cnoreabbrev ag Ack
+  cnoreabbrev aG Ack
+  cnoreabbrev Ag Ack
+  cnoreabbrev AG Ack
 else
   let g:ctrlp_user_command = 'find %s -type f -not -path "*.class" -not -path "*.pyc" -not -path "*/tmp/*"'
   let g:ctrlp_use_caching = 1
@@ -47,6 +48,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+syntax on
 set hlsearch
 set ignorecase
 set smartcase
@@ -96,18 +98,6 @@ let Tlist_WinWidth = 40
 let Tlist_Close_On_Select = 0
 " make it easier to open list
 nmap <c-t><c-l> :TlistToggle<CR>
-
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_auto_loc_list=0
-let g:syntastic_loc_list_height=5
-let g:syntastic_enable_signs = 1
-let g:syntastic_phpcs_conf = "--standard=/home/".expand($USER)."/development/Web/tests/standards/stable-ruleset.xml"
-let g:syntastic_mode_map = { 'mode' : 'passive',
-                           \ 'active_filetypes' : [],
-                           \ 'passive_filetypes' : [] }
 
 " supertab
 let g:SuperTabDefaultCompletionTypeDiscovery = [

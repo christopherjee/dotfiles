@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype plugin indent on

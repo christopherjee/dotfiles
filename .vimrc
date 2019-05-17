@@ -10,8 +10,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
+syntax enable
 filetype plugin indent on
 
 " open all files in argument list in tabs

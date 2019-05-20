@@ -112,11 +112,6 @@ let g:SuperTabLongestHighlight = 1
 " localvimrc
 let g:localvimrc_sandbox = 0
 
-" paste mode toggle
-nnoremap <c-i> :set invpaste paste?<CR>
-set pastetoggle=<c-i>
-set showmode
-
 " tab toggle
 au TabLeave * :let g:tabno = tabpagenr()
 map gg :exec 'normal!' . g:tabno . 'gt'<CR>

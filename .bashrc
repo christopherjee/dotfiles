@@ -27,3 +27,5 @@ source ~/dotfiles/bash_gitprompt
 source ~/dotfiles/bash_gitcompletion
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH="~/dotfiles:$PATH"

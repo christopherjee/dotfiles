@@ -11,6 +11,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-liquid'
 
 call vundle#end()
 syntax enable

@@ -2,8 +2,6 @@
 
 tmux new-session -A -s primary -d -c ~/dev/primary
 
-# maybe need to attach at the end
-
 tmux select-window -t 0
 tmux rename-window web-dev
 tmux send-keys "sudo docker-compose start web-dev && sudo docker-compose start dev-db && sudo docker-compose start redis" C-m

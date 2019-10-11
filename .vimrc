@@ -12,6 +12,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-liquid'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 syntax enable
@@ -89,20 +90,6 @@ let g:searchword = ''
 nmap <c-f> :tabnew<CR>:LAck<Space>''<left>
 nmap <c-f><c-f> :let g:searchword = expand("<cword>")<CR>:tabnew<CR>:LAck <C-R>=string(g:searchword)<CR>
 
-" TList stuff
-" set the names of flags
-let tlist_php_settings = 'php;c:class;f:function;d:constant'
-" close all folds except for current file
-let Tlist_File_Fold_Auto_Close = 1
-" make tlist pane active when opened
-let Tlist_GainFocus_On_ToggleOpen = 1
-" width of window
-let Tlist_WinWidth = 40
-" close tlist when a selection is made
-let Tlist_Close_On_Select = 0
-" make it easier to open list
-nmap <c-t><c-l> :TlistToggle<CR>
-
 " supertab
 let g:SuperTabDefaultCompletionTypeDiscovery = [
             \ "&completefunc:<c-x><c-u>",
@@ -134,3 +121,5 @@ set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp//
 
+" nerdtree
+nmap <c-t> :NERDTree<CR>

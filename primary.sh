@@ -4,12 +4,12 @@ tmux new-session -A -s primary -d -c ~/dev/primary
 
 tmux select-window -t 0
 tmux rename-window web-dev
-tmux send-keys "docker-compose start web-dev && docker-compose start dev-db && docker-compose start redis" C-m
+tmux send-keys "sudo docker-compose start web-dev && sudo docker-compose start dev-db && sudo docker-compose start redis" C-m
 
 tmux new-window -c ~/dev/primary
 tmux select-window -t 1
 tmux rename-window web-dev-logs
-tmux send-keys "docker-compose logs --follow web-dev" C-m
+tmux send-keys "sudo docker-compose logs --follow web-dev" C-m
 
 tmux new-window -c ~/dev/primary
 tmux select-window -t 2

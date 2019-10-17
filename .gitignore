@@ -6,3 +6,4 @@
 .vim/plugin/command-t.vim
 .vim/ruby/
 .repl-history
+.vim/bundle/*

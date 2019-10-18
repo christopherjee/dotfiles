@@ -13,6 +13,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-liquid'
 Plugin 'scrooloose/nerdtree'
+Plugin 'k0kubun/vim-open-github'
 
 call vundle#end()
 syntax enable

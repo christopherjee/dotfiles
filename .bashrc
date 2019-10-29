@@ -35,3 +35,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 eval "$(docker-machine env default)"
 alias primary-dev='open "http://$(docker-machine ip):3000"'
+
+function tunnel_to_dev () {
+    echo http://$(ipconfig getifaddr en0):9000
+    ssh -nNT -L 0.0.0.0:9000:$(docker-machine ip):3000 $USER@localhost
+}

@@ -14,6 +14,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-liquid'
 Plugin 'scrooloose/nerdtree'
 Plugin 'k0kubun/vim-open-github'
+Plugin 'cakebaker/scss-syntax.vim'
 
 call vundle#end()
 syntax enable

@@ -5,7 +5,7 @@ then
     tmux new-session -A -s faos -d -c ~/dev/faos-v0
 
     tmux select-window -t 0
-    tmux rename-window yarn
+    tmux rename-window slate
     tmux send-keys "slate start" C-m
 
     tmux new-window -c ~/dev/faos-v0

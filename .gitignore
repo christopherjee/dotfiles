@@ -7,3 +7,4 @@
 .vim/ruby/
 .repl-history
 .vim/bundle/*
+.DS_Store

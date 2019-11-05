@@ -9,7 +9,6 @@
 LIGHT_GREEN="\[\033[1;32m\]"
       WHITE="\[\033[1;37m\]"
  LIGHT_GRAY="\[\033[0;37m\]"
- ORANGE="\[\033[0;35m\]"
  COLOR_NONE="\[\e[0m\]"
 
 function parse_git_branch {
@@ -18,20 +17,20 @@ function parse_git_branch {
   branch_pattern="^# On branch ([^${IFS}]*)"
   remote_pattern="# Your branch is (.*) of"
   diverge_pattern="# Your branch and (.*) have diverged"
-
+  
   if [[ ! ${git_status}} =~ "working directory clean" ]]; then
-    state="${LIGHT_GREEN}⚡"
+    state="${RED}⚡"
   fi
   # add an else if or two here if you want to get more specific
   if [[ ${git_status} =~ ${remote_pattern} ]]; then
     if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
-      remote="${WHITE}↑"
+      remote="${YELLOW}↑"
     else
-      remote="${WHITE}↓"
+      remote="${YELLOW}↓"
     fi
   fi
   if [[ ${git_status} =~ ${diverge_pattern} ]]; then
-    remote="${WHITE}↕"
+    remote="${YELLOW}↕"
   fi
   if [[ ${git_status} =~ ${branch_pattern} ]]; then
     branch=${BASH_REMATCH[1]}
@@ -46,16 +45,16 @@ function git_dirty_flag {
 function prompt_func() {
     previous_return_value=$?;
     #The lowercase w is the full current working directory
-    #prompt="${TITLEBAR}${WHITE}[${LIGHT_GREEN}\w${GREEN}$(parse_git_branch)${WHITE}]${COLOR_NONE}"
-
+    #prompt="${TITLEBAR}${BLUE}[${RED}\w${GREEN}$(parse_git_branch)${BLUE}]${COLOR_NONE}"
+    
     #Capital W is just the trailing part of the current working directory
-    prompt="${TITLEBAR}${WHITE}[${LIGHT_GREEN}\W${GREEN}$(parse_git_branch)${WHITE}]${COLOR_NONE}"
-
+    prompt="${TITLEBAR}${BLUE}[${RED}\W${GREEN}$(parse_git_branch)${BLUE}]${COLOR_NONE}"
+    
     if test $previous_return_value -eq 0
     then
         PS1="${prompt}> "
     else
-        PS1="${prompt}${LIGHT_GREEN}>${COLOR_NONE} "
+        PS1="${prompt}${RED}>${COLOR_NONE} "
     fi
 }
 

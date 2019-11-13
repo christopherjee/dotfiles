@@ -19,7 +19,7 @@ then
     tmux send-keys "vim" C-m
 
     tmux new-window -c ~/dotfiles
-    tmux select-window -t 2
+    tmux select-window -t 3
     tmux rename-window dotfiles
     tmux send-keys "git branch; git status" C-m
 

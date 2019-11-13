@@ -23,5 +23,10 @@ then
     tmux rename-window vim
     tmux send-keys "vim" C-m
 
+    tmux new-window -c ~/dotfiles
+    tmux select-window -t 4
+    tmux rename-window dotfiles
+    tmux send-keys "git branch; git status" C-m
+
     tmux attach-session -t primary
 fi

@@ -15,7 +15,7 @@ then
 
     tmux new-window -c ~/dev/primary
     tmux select-window -t 2
-    tmux rename-window bash
+    tmux rename-window git
     tmux send-keys "git branch; git status" C-m
 
     tmux new-window -c ~/dev/primary

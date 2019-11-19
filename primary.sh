@@ -20,11 +20,26 @@ then
 
     tmux new-window -c ~/dev/primary
     tmux select-window -t 3
-    tmux rename-window vim
+    tmux rename-window primary-vim
     tmux send-keys "vim" C-m
 
-    tmux new-window -c ~/dotfiles
+    tmux new-window -c ~/dev/primary/vendor
     tmux select-window -t 4
+    tmux rename-window vendor-vim
+    tmux send-keys "vim" C-m
+
+    tmux new-window -c ~/dev/primary
+    tmux select-window -t 5
+    tmux rename-window logs
+    tmux send-keys "docker-compose logs --follow web-dev | grep -E '(warn|error)'" C-m
+
+    tmux new-window -c ~/dev/primary
+    tmux select-window -t 6
+    tmux rename-window pry
+    tmux send-keys "docker-compose exec web-dev bundle exec rails c" C-m
+
+    tmux new-window -c ~/dotfiles
+    tmux select-window -t 7
     tmux rename-window dotfiles
     tmux send-keys "git branch; git status" C-m
 

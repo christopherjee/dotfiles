@@ -31,7 +31,7 @@ then
     tmux new-window -c ~/dev/primary
     tmux select-window -t 5
     tmux rename-window logs
-    tmux send-keys "docker-compose logs --follow web-dev | grep -E '(warn|error|zomg)'" C-m
+    tmux send-keys "docker-compose logs --follow web-dev | grep -iE '(warn|error|zomg)'" C-m
 
     tmux new-window -c ~/dev/primary
     tmux select-window -t 6

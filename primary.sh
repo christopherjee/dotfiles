@@ -5,13 +5,13 @@ then
     tmux new-session -A -s primary -d -c ~/dev/primary
 
     tmux select-window -t 0
-    tmux rename-window web-dev
-    tmux send-keys "docker-compose start web-dev && docker-compose start dev-db && docker-compose start redis" C-m
+    tmux rename-window d-c-exec
+    tmux send-keys "docker-compose start rails dev-db redis sidekiq webpack backend" C-m
 
     tmux new-window -c ~/dev/primary
     tmux select-window -t 1
-    tmux rename-window web-dev-logs
-    tmux send-keys "docker-compose logs --follow web-dev" C-m
+    tmux rename-window d-c-logs
+    tmux send-keys "docker-compose logs --follow rails sidekiq" C-m
 
     tmux new-window -c ~/dev/primary
     tmux select-window -t 2
@@ -31,12 +31,12 @@ then
     tmux new-window -c ~/dev/primary
     tmux select-window -t 5
     tmux rename-window logs
-    tmux send-keys "docker-compose logs --follow web-dev | grep -iE '(warn|error|zomg)'" C-m
+    tmux send-keys "docker-compose logs --follow rails sidekiq | grep -iE '(warn|error|zomg)'" C-m
 
     tmux new-window -c ~/dev/primary
     tmux select-window -t 6
     tmux rename-window pry
-    tmux send-keys "docker-compose exec web-dev bundle exec rails c" C-m
+    tmux send-keys "docker-compose exec rails bundle exec rails c" C-m
 
     tmux new-window -c ~/dotfiles
     tmux select-window -t 7

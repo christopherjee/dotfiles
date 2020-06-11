@@ -31,7 +31,7 @@ then
     tmux new-window -c ~/dev/primary
     tmux select-window -t 5
     tmux rename-window logs
-    tmux send-keys "docker-compose logs --follow rails sidekiq | grep -iE '(warn|error|zomg)'" C-m
+    tmux send-keys "tail -f ./log/app.log | grep -iE '(warn|error|zomg)'" C-m
 
     tmux new-window -c ~/dev/primary
     tmux select-window -t 6
